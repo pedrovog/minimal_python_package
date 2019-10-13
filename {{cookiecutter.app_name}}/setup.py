@@ -22,7 +22,7 @@ setup(
     version=__version__,
     description='{{cookiecutter.project_short_description}}',
     long_description=long_description,
-    url='https://git.geofusion.com.br/python/{{cookiecutter.app_name}}',
+    url='https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}',
     license='BSD',
     classifiers=[
       'Development Status :: 3 - Alpha',

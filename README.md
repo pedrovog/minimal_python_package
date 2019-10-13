@@ -10,7 +10,7 @@ Using this CookieCutter for your project
 ----------------------------------------
 
     $ pip install cookiecutter
-    $ cookiecutter https://git.geofusion.com.br/python/minimal-python-package
+    $ cookiecutter https://github.com/pedrovog/minimal_python_package
 
 You will be asked about your basic info (name, project name, app name, etc.). This info will be used in your new project.
 

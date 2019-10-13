@@ -1,9 +1,9 @@
 {
-	"full_name": "Geofusion",
-	"email": "",
+	"full_name": "Your Name",
+	"email": "Your E-mail",
 	"github_username": "",
-	"project_name": "GeoPython",
-	"app_name": "geoPython",
+	"project_name": "minimal-python-project",
+	"app_name": "minimalPythonProject",
 	"project_short_description": "A python package that can be installed with pip.",
 	"version": "0.0.1"
 }
