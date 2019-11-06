@@ -24,9 +24,6 @@ clean-build:
     rm --force --recursive dist/
     rm --force --recursive *.egg-info
 
-clean-build:
-	echo "make clean-build NOT IMPLEMENTED"
-
 uninstall:
 	echo "make uninstall NOT IMPLEMENTED"
 
