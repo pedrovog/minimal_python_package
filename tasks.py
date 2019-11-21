@@ -1,32 +1,46 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import os
-import shutil
 
-from invoke import task, run
+import os
+import sys
+import json
+import shutil
+import subprocess
 
 HERE = os.path.abspath(os.path.dirname(__file__))
-# Match default value of app_name from cookiecutter.json
 
-COOKIE = os.path.join(HERE, 'mypippkg')
+with open(os.path.join(HERE, 'cookiecutter.json')) as cookiecutter_template:
+    cookiecutter = json.load(cookiecutter_template)
+
+COOKIE = os.path.join(HERE, cookiecutter['app_name'])
 REQUIREMENTS = os.path.join(COOKIE, 'requirements', 'dev.txt')
 
-
-@task
 def build():
-    run('cookiecutter {0} --no-input'.format(HERE))
+    '''
+        Creates a python project based on cookiecutter.json template.
+    '''
+    os.system('cookiecutter {0} --no-input'.format(HERE))
 
-
-@task
 def clean():
+    '''
+        Delete the folder structure created by the build process.
+    '''
     if os.path.exists(COOKIE):
         shutil.rmtree(COOKIE)
         print('Removed {0}'.format(COOKIE))
     else:
         print('App directory does not exist. Skipping.')
 
+if __name__ == '__main__':
 
-@task(pre=[clean, build])
-def test():
-    run('pip install -r {0}'.format(REQUIREMENTS), echo=True)
-    run('python {0} test'.format(os.path.join(COOKIE, 'manage.py')), echo=True)
+    if len(sys.argv) != 2:        
+        raise SystemExit('''How to use:
+    tasks.py [build | clean | test]''')
+    
+    if sys.argv[1] == 'build':
+        build()
+        sys.exit(0)
+    
+    if sys.argv[1] == 'clean':
+        clean()
+        sys.exit(0)

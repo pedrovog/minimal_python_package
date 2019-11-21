@@ -1,6 +1,8 @@
-from setuptools import setup, find_packages
-from codecs import open
+# -*- coding: utf-8 -*-
+
 from os import path
+from codecs import open
+from setuptools import setup, find_packages
 
 __version__ = '{{cookiecutter.version}}'
 
@@ -22,7 +24,7 @@ setup(
     version=__version__,
     description='{{cookiecutter.project_short_description}}',
     long_description=long_description,
-    url='https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}',
+    url='ttps://github.com/pedrovog/{{cookiecutter.app_name}}',
     license='BSD',
     classifiers=[
       'Development Status :: 3 - Alpha',
@@ -35,5 +37,6 @@ setup(
     author='{{cookiecutter.full_name}}',
     install_requires=install_requires,
     dependency_links=dependency_links,
-    author_email='{{cookiecutter.email}}'
+    author_email='{{cookiecutter.email}}',
+    python_requires='>=3.6'
 )

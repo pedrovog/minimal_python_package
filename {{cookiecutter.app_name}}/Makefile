@@ -2,33 +2,33 @@
 
 SHELL := /bin/bash
 
-build:
-	echo "make build NOT IMPLEMENTED"
+setup:
+	echo "make setup NOT IMPLEMENTED"
 
-push:
-	echo "make push NOT IMPLEMENTED"
+build:
+	python3 setup.py sdist bdist_wheel
 
 install:
-	python setup.py install
+	python3 setup.py install
 
-release:
-	echo "make release NOT IMPLEMENTED"
+release: test
+	twine upload -r internal dist/*
 
 clean:
-    find . -name '*.pyc' -exec rm --force {} +
-    find . -name '*.pyo' -exec rm --force {} +
-    find . | grep -E "__pycache__|.pyc|.DS_Store$$" | xargs rm -rf
+	find . -name '*.pyc' -exec rm --force {} +
+	find . -name '*.pyo' -exec rm --force {} +
+	find . | grep -E "__pycache__|.pyc|.DS_Store$$" | xargs rm -rf
 
 clean-build:
-    rm --force --recursive build/
-    rm --force --recursive dist/
-    rm --force --recursive *.egg-info
+	rm --force --recursive build/
+	rm --force --recursive dist/
+	rm --force --recursive *.egg-info
 
 uninstall:
 	echo "make uninstall NOT IMPLEMENTED"
 
 test:
-	echo "make test NOT IMPLEMENTED"
+	pytest
 
 requirements:
 	pip freeze > requirements.txt

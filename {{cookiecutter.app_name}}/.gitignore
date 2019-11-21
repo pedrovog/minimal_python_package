@@ -13,14 +13,17 @@
 .vscode
 
 # Packages
+*.whl
 *.egg
 *.egg-info
+*.tar.gz
 build
 eggs
 parts
 bin
 var
 sdist
+dist/
 develop-eggs
 .installed.cfg
 lib
@@ -33,6 +36,8 @@ pip-log.txt
 .coverage
 .tox
 nosetests.xml
+.pytest_cache
+.pytest_cache/
 
 # Complexity
 output/*.html

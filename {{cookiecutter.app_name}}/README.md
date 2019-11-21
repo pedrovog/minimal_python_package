@@ -1,4 +1,4 @@
-{{ cookiecutter.project_name }}
+{{ cookiecutter.app_name }}
 ===============================
 
 Versão: {{ cookiecutter.version }}
@@ -19,7 +19,7 @@ Para instalar usando pip:
 
 Ou clonando o repositório:
 
-    $ git clone https://git.geofusion.com.br/python/{{cookiecutter.app_name}}.git
+    $ git clone https://gitlab.com/globo-data-analytics/{{ cookiecutter.app_name }}.git
     $ python setup.py install
 
 Exemplo de Uso

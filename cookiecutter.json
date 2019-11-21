@@ -1,9 +1,8 @@
 {
 	"full_name": "Your Name",
 	"email": "Your E-mail",
-	"github_username": "",
-	"project_name": "minimal-python-project",
-	"app_name": "minimalPythonProject",
+	"gitlab_username": "",	
+	"app_name": "your_app_name_here",
 	"project_short_description": "A python package that can be installed with pip.",
 	"version": "0.0.1"
 }
