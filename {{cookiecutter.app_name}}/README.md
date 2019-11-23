@@ -19,7 +19,7 @@ Para instalar usando pip:
 
 Ou clonando o repositório:
 
-    $ git clone https://gitlab.com/globo-data-analytics/{{ cookiecutter.app_name }}.git
+    $ git clone https://github.com/pedrovog/{{ cookiecutter.app_name }}.git
     $ python setup.py install
 
 Exemplo de Uso

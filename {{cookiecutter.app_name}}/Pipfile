@@ -10,6 +10,7 @@ pytest-mock = "*"
 pytest-sugar = "*"
 callee = "*"
 faker = "*"
+twine = "==3.0.0"
 
 [packages]
 pandas = "==0.25.2"
